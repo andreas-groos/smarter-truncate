@@ -6,7 +6,7 @@
   "releaseDraft": false,
   "tests": true,
   "cleanup": true,
-  "preview": true,
+  "preview": false,
   "publish": true,
   "tag": true,
   "push": true,
