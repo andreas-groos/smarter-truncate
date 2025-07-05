@@ -4,7 +4,7 @@
   "anyBranch": false,
   "branch": "main",
   "releaseDraft": false,
-  "tests": false,
+  "tests": true,
   "cleanup": true,
   "preview": true,
   "publish": true,

@@ -43,6 +43,12 @@ npm install
 # Start development server
 npm run dev
 
+# Run tests
+npm run test
+
+# Run tests in watch mode
+npm run test:watch
+
 # Build library
 npm run build:lib
 
