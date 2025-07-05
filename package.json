@@ -4,8 +4,8 @@
   "version": "0.0.4",
   "type": "module",
   "description": "A smart text truncation component for React with Tailwind CSS",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -13,8 +13,9 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
     }
   },
   "keywords": [
@@ -41,21 +42,19 @@
     "test:watch": "vitest",
     "preview": "vite preview",
     "prepublishOnly": "npm run build:lib",
-    "publish": "np",
     "release": "np",
     "test:build": "npm run build:lib && node -e \"console.log('Build successful')\"",
     "dry-run": "np --dry-run"
   },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
-    "tailwindcss": "^4.1.11"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "tailwindcss": "^3.0.0 || ^4.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
+    "@tailwindcss/vite": "^4.1.11",
     "@types/node": "^24.0.10",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
@@ -68,6 +67,7 @@
     "np": "^10.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
     "vite": "^7.0.0",

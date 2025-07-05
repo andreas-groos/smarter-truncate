@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
-      tailwindcss(),
+      ...(isLib ? [] : [tailwindcss()]),
       ...(isLib
         ? [
             dts({
@@ -27,15 +27,16 @@ export default defineConfig(({ mode }) => {
             lib: {
               entry: resolve(__dirname, "src/index.ts"),
               name: "SmartTruncate",
-              fileName: "index",
-              formats: ["es"],
+              fileName: (format) => `index.${format}.js`,
+              formats: ["es", "cjs"],
             },
             rollupOptions: {
-              external: ["react", "react-dom"],
+              external: ["react", "react-dom", "react/jsx-runtime"],
               output: {
                 globals: {
                   react: "React",
                   "react-dom": "ReactDOM",
+                  "react/jsx-runtime": "React.jsxRuntime",
                 },
               },
             },
