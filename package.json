@@ -21,7 +21,7 @@
     "format": "prettier --write src/**/*.{ts,tsx,json,md}",
     "format:check": "prettier --check src/**/*.{ts,tsx,json,md}",
     "prepublishOnly": "npm run type-check && npm run lint && npm run test && npm run build",
-    "release": "npm run prepublishOnly && npm publish"
+    "release": "np"
   },
   "keywords": [
     "text",
@@ -54,5 +54,8 @@
   "bugs": {
     "url": "https://github.com/andreas-groos/smarter-truncate/issues"
   },
-  "homepage": "https://github.com/andreas-groos/smarter-truncate.git#readme"
+  "homepage": "https://github.com/andreas-groos/smarter-truncate.git#readme",
+  "dependencies": {
+    "np": "^10.2.0"
+  }
 }
