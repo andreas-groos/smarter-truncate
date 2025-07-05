@@ -11,7 +11,7 @@ npm install smarter-truncate
 ## Usage
 
 ```tsx
-import { SmartTruncate } from "smart-truncate";
+import { SmarterTruncate } from "smarter-truncate";
 
 function MyComponent() {
   return (
@@ -48,30 +48,45 @@ npm run build:lib
 
 # Lint code
 npm run lint
+
+# Type check
+npm run type-check
+
+# Test build
+npm run test:build
 ```
+
+## Publishing
+
+This project uses `np` for automated publishing:
+
+```bash
+# First time setup: Add git remote
+git remote add origin https://github.com/yourusername/smarter-truncate.git
+
+# Dry run to see what would happen
+npm run dry-run
+
+# Publish new version (interactive)
+npm run publish
+# or
+npm run release
+```
+
+The `np` tool will:
+
+- Run tests and build
+- Bump version in package.json
+- Create git tag
+- Push to git repository
+- Publish to npm
+
+Make sure you have:
+
+- npm login configured (`npm login`)
+- Git remote set up
+- All changes committed
 
 ## License
 
 MIT
-{
-files: ['**/*.{ts,tsx}'],
-extends: [
-// Other configs...
-// Enable lint rules for React
-reactX.configs['recommended-typescript'],
-// Enable lint rules for React DOM
-reactDom.configs.recommended,
-],
-languageOptions: {
-parserOptions: {
-project: ['./tsconfig.node.json', './tsconfig.app.json'],
-tsconfigRootDir: import.meta.dirname,
-},
-// other options...
-},
-},
-])
-
-```
-
-```

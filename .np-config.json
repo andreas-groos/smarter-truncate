@@ -1,0 +1,16 @@
+{
+  "yarn": false,
+  "contents": "dist",
+  "anyBranch": false,
+  "branch": "main",
+  "releaseDraft": false,
+  "tests": false,
+  "cleanup": true,
+  "preview": true,
+  "publish": true,
+  "tag": true,
+  "push": true,
+  "version": true,
+  "message": "Release v%s",
+  "tagMessage": "Release v%s"
+}

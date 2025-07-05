@@ -5,6 +5,7 @@ index.html
 vite.config.ts
 tsconfig*.json
 eslint.config.js
+.np-config.json
 
 # Build artifacts
 node_modules/

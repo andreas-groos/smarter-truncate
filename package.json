@@ -1,7 +1,7 @@
 {
   "name": "smarter-truncate",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.2",
   "type": "module",
   "description": "A smart text truncation component for React with Tailwind CSS",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
     "truncate",
     "component"
   ],
-  "author": "Your Name",
+  "author": "andreas-groos",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -35,8 +35,14 @@
     "build": "tsc -b && vite build",
     "build:lib": "vite build --mode lib",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build:lib"
+    "prepublishOnly": "npm run build:lib",
+    "publish": "np",
+    "release": "np",
+    "test:build": "npm run build:lib && node -e \"console.log('Build successful')\"",
+    "dry-run": "np --dry-run"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
@@ -56,6 +62,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
+    "np": "^10.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "typescript": "~5.8.3",
