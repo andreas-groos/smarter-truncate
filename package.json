@@ -1,7 +1,7 @@
 {
   "name": "smarter-truncate",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "description": "A smart text truncation component for React with Tailwind CSS",
   "main": "dist/index.js",
