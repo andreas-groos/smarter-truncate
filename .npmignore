@@ -1,0 +1,35 @@
+# Development files
+src/
+public/
+index.html
+vite.config.ts
+tsconfig*.json
+eslint.config.js
+
+# Build artifacts
+node_modules/
+.vite/
+.tmp/
+
+# Git and development
+.git/
+.gitignore
+.editorconfig
+.vscode/
+
+# Documentation (except README)
+docs/
+
+# Tests
+**/*.test.*
+**/*.spec.*
+__tests__/
+test/
+tests/
+
+# Environment files
+.env*
+
+# OS files
+.DS_Store
+Thumbs.db

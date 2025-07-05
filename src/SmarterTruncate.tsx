@@ -2,7 +2,7 @@ import type { PropsWithChildren } from "react";
 
 type TailwindClass = string;
 
-export const SmartTruncate = ({
+export const SmarterTruncate = ({
   children,
   className,
 }: PropsWithChildren<{ className?: TailwindClass }>) => {
