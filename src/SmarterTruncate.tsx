@@ -6,5 +6,9 @@ export const SmarterTruncate = ({
   children,
   className,
 }: PropsWithChildren<{ className?: TailwindClass }>) => {
-  return <div className={className}>{children}</div>;
+  const internalClassName = "truncate";
+  const finalClassName = className
+    ? `${internalClassName} ${className}`
+    : internalClassName;
+  return <div className={finalClassName}>{children}</div>;
 };
